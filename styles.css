@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  height: 100%;
+}
+
+.text-container {
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.text-content-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+}
+
+.title-text {
+  font-size: 30px;
+}
+
+.title-text h1 {
+  margin: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 28px;
+  color: hsl(0, 6%, 24%);
+}
+
+.title-text h1:first-child {
+  font-weight: 200;
+  color: hsl(0, 36%, 70%);
+}
+
+.text-content-container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+}
+
+.text-content-container p {
+  color: hsl(0, 36%, 70%);
+  width: 80%;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.input-container button {
+  position: absolute;
+  box-shadow: 0px 7px 19px -1px rgba(250, 190, 190, 1);
+  top: 1px;
+  right: 0px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 300ms ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.input-container button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 87%, 85%));
+  box-shadow: 0px 7px 25px -1px rgba(250, 190, 190, 1);
+}
+
+.input-container input {
+  color: hsl(0, 6%, 24%);
+  outline: none;
+  font-size: 16px;
+  height: 20px;
+  background: none;
+  border: 1px solid hsl(0, 36%, 70%);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.input-container input::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+.img-container {
+  width: 45%;
+  background-image: url("./images/hero-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#error {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: hsl(0, 93%, 68%);
+}
+
+#error-img {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .text-container {
+    order: 2;
+    width: 100%;
+    background-image: none;
+  }
+
+  .text-content-container {
+    position: initial;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .text-content-container .logo {
+    top: 20px;
+    left: 20px;
+  }
+
+  .title-text {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title-text h1 {
+    padding-left: 10px;
+    letter-spacing: 13px;
+  }
+
+  .text-content-container p {
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .input-container {
+    width: 80%;
+  }
+
+  .input-container button {
+    padding: 14px 29px;
+  }
+
+  .img-container {
+    background-size: contain;
+    width: 100%;
+    height: 50%;
+    order: 1;
+    margin-top: 30px;
+    background-image: url("./images/hero-mobile.jpg");
+  }
+}
